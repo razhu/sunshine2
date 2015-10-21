@@ -1,5 +1,6 @@
 package com.casasmap.sunshine;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -17,7 +18,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.forecast_fragment, menu);
+//        getMenuInflater().inflate(R.menu.forecast_fragment, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+
         return true;
     }
 
@@ -33,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
             ForecastFragment.FetchWeatherTask fetchWeatherTask = new ForecastFragment.FetchWeatherTask();
             fetchWeatherTask.execute();
             return true;
+        }
+        if (id == R.id.action_settings){
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
