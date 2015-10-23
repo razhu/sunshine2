@@ -9,4 +9,9 @@
     <string name="pre_location_title">Location</string>
     <string name="pref_zipcode_default" translatable="false">94043</string>
     <string name="action_share">Share</string>
+    <string name="tv_day">Tomorrow</string>
+    <string name="tv_forecast">Sunny</string>
+    <string name="tv_max">19c</string>
+    <string name="tv_min">2c</string>
+    <string name="tv_carajo">carajo</string>
 </resources>

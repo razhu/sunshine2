@@ -36,7 +36,7 @@ public class ForecastFragment extends Fragment {
 
         String[] weekdays = {"monday sunny", "tuesday sunny", "wednesday rain"};
        final ListAdapter weatherForecast = new ArrayAdapter<String>(getActivity(),
-                                    R.layout.list_item_forecast, weekdays);
+                                    R.layout.list_item_forecast, R.id.list_item_forecast_textview, weekdays);
         ListView listView = (ListView) view.findViewById(R.id.listview_forecast);
 
         listView.setAdapter(weatherForecast);
